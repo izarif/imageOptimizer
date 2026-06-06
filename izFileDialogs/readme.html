@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>izFileDialogs</title>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+</head>
+<body>
+  <h1>izFileDialogs</h1>
+  <p>This is a modified version of <a href=
+  "https://github.com/mlabbe/nativefiledialog/">Native File
+  Dialog</a> library</p>
+  <p>Modified by Aydar Zarifullin</p>
+  <h2>Building</h2>
+  <p>Only Windows is supported for now</p>
+  <ol>
+    <li>Install "Visual Studio 2017" or newer</li>
+    <li>Install "Desktop Development with C++" package using
+    "Visual Studio Installer"</li>
+    <li>Install "<a href=
+    "https://premake.github.io/">Premake</a>"</li>
+    <li>Build "<a href="https://luajit.org/">LuaJIT</a>"
+    library</li>
+    <li>Place "lua51.lib" file to
+    "&lt;pathToCurrentDir&gt;\buildDeps\lua\" folder</li>
+    <li>Place "lua.h", "lualib.h", "lauxlib.h", "luaconf.h" files to
+    "&lt;pathToCurrentDir&gt;\buildDeps\lua\" folder</li>
+    <li>Build "izNative" library</li>
+    <li>Place "izn.lib" file to
+    "&lt;pathToCurrentDir&gt;\buildDeps\izn\" folder</li>
+    <li>Place "izn.h" file to
+    "&lt;pathToCurrentDir&gt;\buildDeps\izn\" folder</li>
+    <li>Open "x86 Native Tools Command Prompt for VS"</li>
+    <li>Execute the following commands:
+      <pre><code>
+&gt; cd &lt;pathToCurrentDir&gt;
+&gt; premake5.exe vs2017
+</code></pre>
+      <p>You will see "izfd.vcxproj" file</p>
+    </li>
+    <li>Open "izfd.vcxproj" file using "Visual Studio"</li>
+    <li>Build as every other project</li>
+  </ol>
+</body>
+</html>

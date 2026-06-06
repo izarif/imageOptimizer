@@ -1,0 +1,23 @@
+{
+  "files":"Файлы",
+  "add":"Добавить",
+  "remove":"Убрать",
+  "start":"Начать",
+  "cancel":"Отменить",
+  "progress":"Прогресс",
+  "donate":"Поддержать автора",
+  "sureCancelTitle":"Отменить?",
+  "sureCancelProcess":"Вы действительно хотите отменить процесс?",
+  "yes":"Да",
+  "no":"Нет",
+  "canceledTitle":"Отменено",
+  "processCanceled":"Процесс был отменен",
+  "completedTitle":"Завершено",
+  "processCompleted":"Процесс завершен",
+  "ok":"Ок",
+  "fileOptimized":"Файл оптимизирован, вес уменьшен на %d кб (%.2f%%)",
+  "fileNotExistErr":"Ошибка: Файл не существует",
+  "unknownFileTypeErr":"Ошибка: Неизвестный тип файла",
+  "fileAlreadyOptimizedErr":"Ошибка: Оптимизированный файл уже существует",
+  "unknownErr":"Неизвестная ошибка"
+}

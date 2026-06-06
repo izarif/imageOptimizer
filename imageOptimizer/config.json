@@ -1,0 +1,17 @@
+{
+  "cmds":[
+    "optipng -o=7 -nb -nc -np -force -quiet -out=%s %s",
+    "jpegtran -optimize -copy none -outfile %s %s",
+    "gifsicle --optimize=3 --output=%s %s"
+  ],
+  "langs":[
+    {
+      "name":"English",
+      "code":"eng"
+    },
+    {
+      "name":"Russian",
+      "code":"rus"
+    }
+  ]
+}

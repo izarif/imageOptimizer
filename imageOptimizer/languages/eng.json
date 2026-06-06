@@ -1,0 +1,23 @@
+{
+  "files":"Files",
+  "add":"Add",
+  "remove":"Remove",
+  "start":"Start",
+  "cancel":"Cancel",
+  "progress":"Progress",
+  "donate":"Support the author",
+  "sureCancelTitle":"Cancel?",
+  "sureCancelProcess":"Are you sure you want to cancel the process?",
+  "yes":"Yes",
+  "no":"No",
+  "canceledTitle":"Canceled",
+  "processCanceled":"The process was canceled",
+  "completedTitle":"Completed",
+  "processCompleted":"The process completed",
+  "ok":"Ok",
+  "fileOptimized":"File has been optimized, size has been reduced by %d kb (%.2f%%)",
+  "fileNotExistErr":"Error: File does not exist",
+  "unknownFileTypeErr":"Error: Unknown file type",
+  "fileAlreadyOptimizedErr":"Error: Optimized file already exists",
+  "unknownErr":"Unknown error"
+}
