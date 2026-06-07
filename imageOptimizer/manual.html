@@ -1,127 +1,149 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <meta http-equiv="Content-Type" content=
-  "text/html; charset=utf-8">
-  <link rel="stylesheet" href="style.css">
-  <title>Manual</title>
-</head>
-<body>
-  <h1>imageOptimizer</h1>
-  <p>Program for compressing PNG, JPG, and GIF images</p>
-  <p>The compression is lossless, meaning the image quality is not
-  compromised</p>
-  <h2>System requirements</h2>
-  <ul>
-    <li>Operating system: Windows Vista or newer</li>
-  </ul>
-  <h2>Usage</h2>
-  <p>Note: Before using, make sure that you have enough free space
-  to store compressed copies of images</p>
-  <p>Note: The compressed image can be larger than the original (if
-  this happens, it means that this image cannot be compressed)</p>
-  <p>Unpack the "ImageOptimizer.zip" archive to a separate
-  folder</p>
-  <p>Open the program folder and run the "imageOptimizer.exe"
-  file</p>
-  <p>Select your preferred language from the drop-down list and
-  click the "Ok" button</p>
-  <p>To compress the image, click "Add" button</p>
-  <p>Select one or more files of a suitable format and click the
-  "Open" button</p>
-  <p>The paths to the selected files will be displayed in the main
-  window of the program, in thw list</p>
-  <p>To remove a file from the list, click on it and click the
-  "Remove" button (you can select several files if you hold down
-  the "ctrl" key when clicking)</p>
-  <p>To start the compression process, click the "Start" button</p>
-  <p>Wait until a window appears with the text "Process
-  completed"</p>
-  <p>Once the process is complete, the compressed versions of the
-  images will be saved in the program folder, in the "optimized"
-  subfolder</p>
-  <p>Once the process is complete, a file named "report.txt" will
-  be created in the program folder, containing information on how
-  well the images were compressed</p>
-  <p>If you want to cancel the process, click the "Cancel"
-  button</p>
-  <p>If, for any reason, you have terminated the program using
-  "Task Manager" you must manually terminate the following
-  processes:</p>
-  <ul>
-    <li>optipng</li>
-    <li>jpegtran</li>
-    <li>gifsicle</li>
-  </ul>
-  <p>Do not edit the "cfg.json" file unless necessary</p>
-  <h2>Contacts</h2>
-  <p>If you have any questions or suggestions, feel free to write to me</p>
-  <p><a href="mailto:aydar.js@gmail.com">aydar.js@gmail.com</a></p>
-  <p>Please visit my website to see alternative ways to contact me</p>
-  <p><a href="https://izarif.github.io/">https://izarif.github.io/</a></p>
-  <h2>Licence</h2>
-  <p>See the "licences/license.html" file</p>
-  <p class="thirdPartiesHeader">This software uses the following
-  third-party components:</p>
-  <p class="thirdPartyName">
-  imageOptimizer/resources/dejaVuSansRegular.ttf</p>
-  <p><a href=
-  "https://dejavu-fonts.github.io/">https://dejavu-fonts.github.io/</a></p>
-  <p>Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
-  Bitstream Vera is a trademark of Bitstream, Inc</p>
-  <p>Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved</p>
-  <p class="thirdPartyName">
-  imageOptimizer/resources/completed.ogg</p>
-  <p><a href=
-  "https://freesound.org/people/_lucy/sounds/780010/">https://freesound.org/people/_lucy/sounds/780010/</a></p>
-  <p>Created by _lucy</p>
-  <p class="thirdPartyName">LOVE</p>
-  <p><a href="https://love2d.org/">https://love2d.org/</a></p>
-  <p>Copyright (c) 2006-2026 LOVE Development Team</p>
-  <p class="thirdPartyName">Love Frames</p>
-  <p><a href=
-  "https://github.com/linux-man/LoveFrames/">https://github.com/linux-man/LoveFrames/</a></p>
-  <p>Copyright (c) 2014 Kenny Shields</p>
-  <p>Modified by Raman Varabets in 2015 - 2016</p>
-  <p>Modified by Caldas Lopes in 2016 - 2026</p>
-  <p>Modified by Aydar Zarifullin in 2026</p>
-  <p class="thirdPartyName">Native File Dialog</p>
-  <p><a href=
-  "https://github.com/mlabbe/nativefiledialog/">https://github.com/mlabbe/nativefiledialog/</a></p>
-  <p>Copyright (c) 2014-2019 Frogtoss Games, Inc</p>
-  <p>Created by Michael Labbe</p>
-  <p>Modified by Aydar Zarifullin in 2026</p>
-  <p class="thirdPartyName">lua-nfd</p>
-  <p><a href=
-  "https://github.com/Alloyed/nativefiledialog/">https://github.com/Alloyed/nativefiledialog/</a></p>
-  <p>Created by Alloyed</p>
-  <p>Modified by Aydar Zarifullin in 2026</p>
-  <p class="thirdPartyName">Lua CJSON</p>
-  <p><a href=
-  "https://github.com/mpx/lua-cjson/">https://github.com/mpx/lua-cjson/</a></p>
-  <p>Copyright (c) 2010-2012 Mark Pulford &lt;mark@kyne.au&gt;</p>
-  <p class="thirdPartyName">luautf8</p>
-  <p><a href=
-  "https://github.com/starwing/luautf8/">https://github.com/starwing/luautf8/</a></p>
-  <p>Copyright (c) 2018 Xavier Wang</p>
-  <p class="thirdPartyName">OptiPNG</p>
-  <p><a href=
-  "https://optipng.sourceforge.net/">https://optipng.sourceforge.net/</a></p>
-  <p>Copyright (c) 2001-2025 Cosmin Truta and the Contributing
-  Authors</p>
-  <p class="thirdPartyName">JPEGTran</p>
-  <p><a href=
-  "https://github.com/mozilla/mozjpeg/blob/master/jpegtran.c">https://github.com/mozilla/mozjpeg/blob/master/jpegtran.c</a></p>
-  <p>Copyright (c) 1991-2020, Thomas G. Lane, Guido Vollbeding</p>
-  <p>Copyright (c) 2010, 2014, 2017, 2019-2022, 2024, D. R.
-  Commander</p>
-  <p>Copyright (c) 2014, Mozilla Corporation</p>
-  <p class="thirdPartyName">Gifsicle</p>
-  <p><a href=
-  "https://www.lcdf.org/gifsicle/">https://www.lcdf.org/gifsicle/</a></p>
-  <p>Copyright (c) 1997-2025 Eddie Kohler</p>
-  <p>To read the text of the licenses of third-party components,
-  see the "licences/" folder</p>
-</body>
+  <head>
+    <meta http-equiv="Content-Type" content=
+      "text/html; charset=utf-8">
+    <title>Manual</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>imageOptimizer</h1>
+    <p>Program for compressing PNG, JPG, and GIF images</p>
+    <p>The compression is lossless, meaning the image quality is not
+      compromised
+    </p>
+    <h2>System requirements</h2>
+    <ul>
+      <li>Operating system: Windows Vista or newer</li>
+    </ul>
+    <h2>Usage</h2>
+    <p>Note: Before using, make sure that you have enough free space
+      to store compressed copies of images
+    </p>
+    <p>Note: The compressed image can be larger than the original (if
+      this happens, it means that this image cannot be compressed)
+    </p>
+    <p>Unpack the <span class="highlight1">ImageOptimizer.zip</span> archive to a separate
+      folder
+    </p>
+    <p>Open the program folder and run the <span class="highlight1">imageOptimizer.exe</span>
+      file
+    </p>
+    <p>Select your preferred language from the drop-down list and
+      click the <span class="highlight1">Ok</span> button
+    </p>
+    <p>To compress the image, click <span class="highlight1">Add</span> button</p>
+    <p>Select one or more files of a supported format and click the
+      <span class="highlight1">Open</span> button
+    </p>
+    <p>The paths to the selected files will be displayed in the main in the list, in the main
+      window of the program,
+    </p>
+    <p>To remove a file from the list, click on it and click the
+      <span class="highlight1">Remove</span> button (you can select multiple files if you hold down
+      the <span class="highlight1">ctrl</span> key when clicking)
+    </p>
+    <p>To start the compression process, click the <span class="highlight1">Start</span> button</p>
+    <p>Wait until a window appears with the text <span class="highlight1">Process completed</span>
+    </p>
+    <p>When the process is completed, the compressed versions of the
+      images will be saved in the program folder, in the <span class="highlight1">optimized</span>
+      subfolder
+    </p>
+    <p>Once the process is complete, a file named <span class="highlight1">report.txt</span> will
+      be created in the program folder, containing information on how
+      well the images were compressed
+    </p>
+    <p>If you want to cancel the process, click the <span class="highlight1">Cancel</span>
+      button
+    </p>
+    <p>If, for any reason, you have terminated the program using
+      <span class="highlight1">Task Manager</span> you must manually terminate the following
+      processes:
+    </p>
+    <ul>
+      <li>optipng</li>
+      <li>jpegtran</li>
+      <li>gifsicle</li>
+    </ul>
+    <p>Do not edit the <span class="highlight1">cfg.json</span> file unless necessary</p>
+    <h2>Contacts</h2>
+    <p>If you have any questions or suggestions, feel free to write to me</p>
+    <p><a href="mailto:aydar.js@gmail.com">aydar.js@gmail.com</a></p>
+    <p>Please visit my website to see alternative ways to contact me</p>
+    <p><a href="https://izarif.github.io/">https://izarif.github.io/</a></p>
+    <h2>Licence</h2>
+    <p>See the <span class="highlight1">licences/license.html</span> file</p>
+    <p class="thirdPartiesHeader">This software uses the following
+      third-party components:
+    </p>
+    <p><span class="highlight1">
+      imageOptimizer/resources/dejaVuSansRegular.ttf
+      </span>
+    </p>
+    <p><a href=
+      "https://dejavu-fonts.github.io/">https://dejavu-fonts.github.io/</a></p>
+    <p>Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
+      Bitstream Vera is a trademark of Bitstream, Inc
+    </p>
+    <p>Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved</p>
+    <p><span class="highlight1">
+      imageOptimizer/resources/completed.ogg
+      </span>
+    </p>
+    <p><a href=
+      "https://freesound.org/people/_lucy/sounds/780010/">https://freesound.org/people/_lucy/sounds/780010/</a></p>
+    <p>Created by _lucy</p>
+    <p><span class="highlight1">LOVE</span></p>
+    <p><a href="https://love2d.org/">https://love2d.org/</a></p>
+    <p>Copyright (c) 2006-2026 LOVE Development Team</p>
+    <p><span class="highlight1">Love Frames</span></p>
+    <p><a href=
+      "https://github.com/linux-man/LoveFrames/">https://github.com/linux-man/LoveFrames/</a></p>
+    <p>Copyright (c) 2014 Kenny Shields</p>
+    <p>Modified by Raman Varabets in 2015 - 2016</p>
+    <p>Modified by Caldas Lopes in 2016 - 2026</p>
+    <p>Modified by Aydar Zarifullin in 2026</p>
+    <p><span class="highlight1">Native File Dialog</span></p>
+    <p><a href=
+      "https://github.com/mlabbe/nativefiledialog/">https://github.com/mlabbe/nativefiledialog/</a></p>
+    <p>Copyright (c) 2014-2019 Frogtoss Games, Inc</p>
+    <p>Created by Michael Labbe</p>
+    <p>Modified by Aydar Zarifullin in 2026</p>
+    <p><span class="highlight1">lua-nfd</span></p>
+    <p><a href=
+      "https://github.com/Alloyed/nativefiledialog/">https://github.com/Alloyed/nativefiledialog/</a></p>
+    <p>Created by Alloyed</p>
+    <p>Modified by Aydar Zarifullin in 2026</p>
+    <p><span class="highlight1">Lua CJSON</span></p>
+    <p><a href=
+      "https://github.com/mpx/lua-cjson/">https://github.com/mpx/lua-cjson/</a></p>
+    <p>Copyright (c) 2010-2012 Mark Pulford &lt;mark@kyne.au&gt;</p>
+    <p><span class="highlight1">luautf8</span></p>
+    <p><a href=
+      "https://github.com/starwing/luautf8/">https://github.com/starwing/luautf8/</a></p>
+    <p>Copyright (c) 2018 Xavier Wang</p>
+    <p><span class="highlight1">OptiPNG</span></p>
+    <p><a href=
+      "https://optipng.sourceforge.net/">https://optipng.sourceforge.net/</a></p>
+    <p>Copyright (c) 2001-2025 Cosmin Truta and the Contributing
+      Authors
+    </p>
+    <p><span class="highlight1">JPEGTran</span></p>
+    <p><a href=
+      "https://github.com/mozilla/mozjpeg/blob/master/jpegtran.c">https://github.com/mozilla/mozjpeg/blob/master/jpegtran.c</a></p>
+    <p>Copyright (c) 1991-2020, Thomas G. Lane, Guido Vollbeding</p>
+    <p>Copyright (c) 2010, 2014, 2017, 2019-2022, 2024, D. R.
+      Commander
+    </p>
+    <p>Copyright (c) 2014, Mozilla Corporation</p>
+    <p><span class="highlight1">Gifsicle</span></p>
+    <p><a href=
+      "https://www.lcdf.org/gifsicle/">https://www.lcdf.org/gifsicle/</a></p>
+    <p>Copyright (c) 1997-2025 Eddie Kohler</p>
+    <p>To read the text of the licenses of third-party components,
+      see the <span class="highlight1">licences/</span> folder
+    </p>
+  </body>
 </html>

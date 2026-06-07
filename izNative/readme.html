@@ -1,38 +1,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <title>izNative</title>
-  <meta http-equiv="Content-Type" content=
-  "text/html; charset=utf-8">
-</head>
-<body>
-  <h1>izNative</h1>
-  <p>Library that contains platform-specific code</p>
-  <h2>Building</h2>
-  <p>Only Windows is supported for now</p>
-  <ol>
-    <li>Install "Visual Studio 2017" or newer</li>
-    <li>Install "Desktop Development with C++" package using
-    "Visual Studio Installer"</li>
-    <li>Install "<a href=
-    "https://premake.github.io/">Premake</a>"</li>
-    <li>Build "<a href="https://luajit.org/">LuaJIT</a>"
-    library</li>
-    <li>Place "lua51.lib" file to
-    "&lt;pathToCurrentDir&gt;\buildDeps\lua\" folder</li>
-    <li>Place "lua.h", "lualib.h", "lauxlib.h", "luaconf.h" files to
-    "&lt;pathToCurrentDir&gt;\buildDeps\lua\" folder</li>
-    <li>Open "x86 Native Tools Command Prompt for VS"</li>
-    <li>Execute the following commands:
-      <pre><code>
-&gt; cd &lt;pathToCurrentDir&gt;
-&gt; premake5.exe vs2017
-</code></pre>
-      <p>You will see "izn.vcxproj" file</p>
-    </li>
-    <li>Open "izn.vcxproj" file using "Visual Studio"</li>
-    <li>Build as every other project</li>
-  </ol>
-</body>
+  <head>
+    <title>izNative</title>
+    <meta http-equiv="Content-Type" content=
+      "text/html; charset=utf-8">
+    <title>izNative</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>izNative</h1>
+    <p>Library that contains platform-specific code</p>
+    <h2>Building</h2>
+    <p>Only Windows is supported for now</p>
+    <ol>
+      <li>Install <span class="highlight1">Visual Studio 2017</span> or newer</li>
+      <li>Install <span class="highlight1">Desktop Development with C++</span> package using
+        <span class="highlight1">Visual Studio Installer</span>
+      </li>
+      <li>Install <a href=
+        "https://premake.github.io/">Premake</a></li>
+      <li>Build <a href="https://luajit.org/">LuaJIT</a>
+        library
+      </li>
+      <li>Place <span class="highlight1">lua51.lib</span> file to
+        <span class="highlight1">&lt;currentFolderPath&gt;\buildDeps\lua\</span> folder
+      </li>
+      <li>Place <span class="highlight1">lua.h</span>, <span class="highlight1">lualib.h</span>, <span class="highlight1">lauxlib.h</span>, <span class="highlight1">luaconf.h</span> files
+        to <span class="highlight1">&lt;currentFolderPath&gt;\buildDeps\lua\</span> folder
+      </li>
+      <li>Run <span class="highlight1">x86 Native Tools Command Prompt for VS</span></li>
+      <li>
+        Execute the following commands:
+        <pre><div class="highlight1">
+&gt; cd &lt;currentFolderPath&gt;
+&gt; &lt;premakeBinPath&gt; vs2017
+      </div></pre>
+        <p>Where <span class="highlight1">&lt;currentFolderPath&gt;</span> is something like <span class="highlight1">C:\Users\zar-s\projects\imageOptimizer\izNative</span></p>
+        <p>Where <span class="highlight1">&lt;premakeBinPath&gt;</span> is something like <span class="highlight1">C:\Users\zar-s\soft\premake5.exe</span></p>
+        <p>After executing these commands you will see <span class="highlight1">izn.vcxproj</span> file</p>
+      </li>
+      <li>Open <span class="highlight1">izn.vcxproj</span> file using <span class="highlight1">Visual Studio</span></li>
+      <li>Build as any other project</li>
+    </ol>
+  </body>
 </html>
