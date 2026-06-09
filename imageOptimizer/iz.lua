@@ -1,5 +1,6 @@
 local iz = {}
 
+local lfs = require("lfs")
 local cjson = require("cjson")
 
 function iz.readCfg()
@@ -45,6 +46,16 @@ function iz.translateStr(s)
   return result
 end
 
+function iz.fileExists(path)
+  local mode = lfs.attributes(path, "mode")
+
+  if mode then
+    return true
+  end
+
+  return false
+end
+
 iz.osName = nil
 
 function iz.getOsName()
@@ -52,41 +63,33 @@ function iz.getOsName()
     return iz.osName
   end
 
-  local file = io.open("C:/Windows/System32/winver.exe", "r")
+  local filePath = "C:/Windows/System32/winver.exe"
 
-  if file then
-    file:close()
-
+  if iz.fileExists(filePath) then
     iz.osName = "windows"
 
     return iz.osName
   end
 
-  file = io.open("/usr/bin/sw_vers", "r")
+  filePath = "/usr/bin/sw_vers"
 
-  if file then
-    file:close()
-
+  if iz.fileExists(filePath) then
     iz.osName = "macos"
 
     return iz.osName
   end
 
-  file = io.open("/etc/freebsd-version", "r")
+  filePath = "/etc/freebsd-version"
 
-  if file then
-    file:close()
-
+  if iz.fileExists(filePath) then
     iz.osName = "freebsd"
 
     return iz.osName
   end
 
-  file = io.open("/system/build.prop", "r")
+  filePath = "/system/build.prop"
 
-  if file then
-    file:close()
-
+  if iz.fileExists(filePath) then
     iz.osName = "android"
 
     return iz.osName
