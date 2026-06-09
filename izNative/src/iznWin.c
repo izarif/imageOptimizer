@@ -75,7 +75,7 @@ iznExport int iznExecCmd(const char* cmd)
     return exitCode;
   }
 
-  BOOL isSuccess = CreateProcessW(
+  BOOL success = CreateProcessW(
                      NULL,
                      utf16Cmd,
                      NULL,
@@ -90,7 +90,7 @@ iznExport int iznExecCmd(const char* cmd)
 
   free(utf16Cmd);
 
-  if (isSuccess) {
+  if (success) {
     WaitForSingleObject(pi.hProcess, INFINITE);
     GetExitCodeProcess(pi.hProcess, &exitCode);
     CloseHandle(pi.hProcess);

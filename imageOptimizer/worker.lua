@@ -67,7 +67,7 @@ function getFileExt(path)
 end
 
 function makeDir(path)
-  if lfs.attributes(path, "mode") then
+  if iz.fileExists(path) then
     return nil
   end
 
@@ -81,7 +81,7 @@ function makeDir(path)
       curPath = curPath .. sep .. pathPart
     end
 
-    if not lfs.attributes(curPath, "mode") then
+    if iz.fileExists(curPath) then
       lfs.mkdir(curPath)
     end
   end
@@ -122,14 +122,13 @@ end
 local mainChannel = love.thread.getChannel("main")
 local workerChannel = love.thread.getChannel("worker")
 
-local cfg = iz.readCfg()
 local isCanceled = false
 local userDirPath = getUserDirPath()
+local cfg = iz.readCfg()
 local reportFile = io.open("report.txt", "w")
 local data = cjson.decode(...)
 local langCode = data["langCode"]
 iz.langTable = iz.readLangTable(langCode)
-
 local inFilePaths = data["filePaths"]
 
 for idx, inFilePath in ipairs(inFilePaths) do
@@ -149,7 +148,7 @@ for idx, inFilePath in ipairs(inFilePaths) do
   report["inPath"] = inFilePath
   report["status"] = "ok"
 
-  if not lfs.attributes(inFilePath, "mode") then
+  if not iz.fileExists(inFilePath) then
     report["status"] = "fileNotExist"
   elseif not isImgPath(inFilePath) then
     report["status"] = "unknownFileTypeErr"
@@ -162,7 +161,7 @@ for idx, inFilePath in ipairs(inFilePaths) do
     outFilePath = utf8.gsub(outFilePath, "^[a-zA-Z]:", "") -- remove drive letter
     outFilePath = "optimized" .. outFilePath
 
-    if lfs.attributes(outFilePath, "mode") then
+    if iz.fileExists(outFilePath) then
       report["status"] = "fileAlreadyOptimizedErr"
     end
   end
@@ -206,7 +205,7 @@ for idx, inFilePath in ipairs(inFilePaths) do
 
     izn.execCmd(cmd)
 
-    if not lfs.attributes(outFilePath, "mode") then
+    if not iz.fileExists(outFilePath) then
       report["status"] = "unknownErr"
     end
 

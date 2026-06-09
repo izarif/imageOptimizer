@@ -9,15 +9,14 @@ local izfd = nil
 local iz = nil
 local izn = nil
 
-local font = nil
-local completedSound = nil
 local frameW = nil
 local frameH = nil
 local frameHeaderH = nil
 local padding = nil
-
-local langCode = nil
 local cfg = nil
+local font = nil
+local completedSound = nil
+local langCode = nil
 
 local langFrame = nil
 local mainFrame = nil
@@ -436,16 +435,16 @@ function love.load()
   izn = require("izn")
 
   maxFps = 30
-  cfg = iz.readCfg()
 
   loveframes.SetActiveSkin("green")
 
-  font = love.graphics.newFont("resources/dejaVuSansRegular.ttf", 16)
-  completedSound = love.audio.newSource("resources/completed.ogg", "static")
   frameW = 310
   frameH = 405
   frameHeaderH = 25
   padding = 5
+  cfg = iz.readCfg()
+  font = love.graphics.newFont("resources/dejaVuSansRegular.ttf", 16)
+  completedSound = love.audio.newSource("resources/completed.ogg", "static")
 
   langFrame = createLangFrame()
 end
