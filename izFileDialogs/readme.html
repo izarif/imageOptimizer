@@ -1,56 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
-    <meta http-equiv="Content-Type" content=
-      "text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>izFileDialogs</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>izFileDialogs</h1>
-    <p>This is a modified version of <a href=
-      "https://github.com/mlabbe/nativefiledialog/">Native File
-      Dialog</a> library
+    <p>
+      This is a modified version of <a href="https://github.com/mlabbe/nativefiledialog/">Native File Dialog</a> library
     </p>
     <p>Modified by Aydar Zarifullin</p>
     <h2>Building</h2>
     <p>Only Windows is supported for now</p>
     <ol>
-      <li>Install <span class="highlight1">Visual Studio 2017</span> or newer</li>
-      <li>Install <span class="highlight1">Desktop Development with C++</span> package using
-        <span class="highlight1">Visual Studio Installer</span>
+      <li>Install <span class="code1">Visual Studio 2017</span> or newer</li>
+      <li>
+        Install <span class="code1">Desktop Development with C++</span> package using
+        <span class="code1">Visual Studio Installer</span>
       </li>
-      <li>Install <a href=
-        "https://premake.github.io/">Premake</a></li>
-      <li>Build <a href="https://luajit.org/">LuaJIT</a>
+      <li>Download <a href="https://premake.github.io/">Premake</a></li>
+      <li>
+        Build <a href="https://luajit.org/">LuaJIT</a>
         library
       </li>
-      <li>Place <span class="highlight1">lua51.lib</span> file to
-        <span class="highlight1">&lt;currentFolderPath&gt;\buildDeps\lua\</span> folder
+      <li>
+        Move <span class="code1">lua51.lib</span> file to
+        <span class="code1">&lt;thisProjectFolderPath&gt;\buildDeps\lua\</span> folder
       </li>
-      <li>Place <span class="highlight1">lua.h</span>, <span class="highlight1">lualib.h</span>, <span class="highlight1">lauxlib.h</span>, <span class="highlight1">luaconf.h</span> files to
-        <span class="highlight1">&lt;currentFolderPath&gt;\buildDeps\lua\</span> folder
+      <li>
+        Move <span class="code1">lua.h</span>, <span class="code1">lualib.h</span>,
+        <span class="code1">lauxlib.h</span>, <span class="code1">luaconf.h</span> files to
+        <span class="code1">&lt;thisProjectFolderPath&gt;\buildDeps\lua\</span> folder
       </li>
-      <li>Build <span class="highlight1">izNative</span> library</li>
-      <li>Place <span class="highlight1">izn.lib</span> file to
-        <span class="highlight1">&lt;currentFolderPath&gt;\buildDeps\izn\</span> folder
+      <li>Build <span class="code1">izNative</span> library</li>
+      <li>
+        Move <span class="code1">izn.lib</span> file to
+        <span class="code1">&lt;thisProjectFolderPath&gt;\buildDeps\izn\</span> folder
       </li>
-      <li>Place <span class="highlight1">izn.h</span> file to
-        <span class="highlight1">&lt;currentFolderPath&gt;\buildDeps\izn\</span> folder
+      <li>
+        Move <span class="code1">izn.h</span> file to
+        <span class="code1">&lt;thisProjectFolderPath&gt;\buildDeps\izn\</span> folder
       </li>
-      <li>Run <span class="highlight1">x86 Native Tools Command Prompt for VS</span></li>
+      <li>Run <span class="code1">x86 Native Tools Command Prompt for VS</span></li>
       <li>
         Execute the following commands:
-        <pre><div class="highlight1">
-&gt; cd &lt;currentFolderPath&gt;
-&gt; &lt;premakeBinPath&gt; vs2017
+        <pre><div class="code1">
+&gt; cd &lt;thisProjectFolderPath&gt;
+&gt; &lt;premakeExePath&gt; vs2017
       </div></pre>
-        <p>Where <span class="highlight1">&lt;currentFolderPath&gt;</span> is something like <span class="highlight1">C:\Users\zar-s\projects\imageOptimizer\izFileDialogs</span></p>
-        <p>Where <span class="highlight1">&lt;premakeBinPath&gt;</span> is something like <span class="highlight1">C:\Users\zar-s\soft\premake5.exe</span></p>
-        <p>After executing these commands you will see <span class="highlight1">izfd.vcxproj</span> file</p>
+        <p>
+          Where <span class="code1">&lt;thisProjectFolderPath&gt;</span> is something like
+          <span class="code1">C:\Users\zar-s\projects\imageOptimizer\izFileDialogs</span>
+        </p>
+        <p>
+          Where <span class="code1">&lt;premakeExePath&gt;</span> is something like
+          <span class="code1">C:\Users\zar-s\soft\premake5.exe</span>
+        </p>
+        <p>After executing these commands <span class="code1">izfd.vcxproj</span> file will be created</p>
       </li>
-      <li>Open <span class="highlight1">izfd.vcxproj</span> file using <span class="highlight1">Visual Studio</span></li>
+      <li>Open <span class="code1">izfd.vcxproj</span> file using <span class="code1">Visual Studio</span></li>
       <li>Build as any other project</li>
     </ol>
   </body>
